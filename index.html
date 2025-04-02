@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/0555ab9877.js" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/0555ab9877.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    { <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "SUR3M-booW5QRutt-",
+      });
+   })();
+</script> }
+</head>
+
 <body>
     <section id="landing-page">
         <nav>
@@ -101,7 +114,36 @@
                     </figure>
                 </div>
             </div>
-            <div class="modal__half modal__contact">Lets Connect!</div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">
+                    Let's Connect!
+                </h3>
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    Would be great to hear from you.  
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label"><b class="red">* </b>Name</label>
+                        <input class="input" name="user_name" type="text" ></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label"><b class="red">* </b>E-mail</label>
+                        <input class="input" name="user_email" type="text" ></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label"><b class="red">*</b> Message</label>
+                        <textarea class="input" name="message" type="text" ></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Connect Now</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div> 
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the form submission! Looking forward to speaking with you soon.
+                </div>
+            </div>
+            <i class="fas fa-times modal__exit click"></i>
         </div>
     </section>
 
