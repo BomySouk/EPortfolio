@@ -7,16 +7,12 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/0555ab9877.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
-    { <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "SUR3M-booW5QRutt-",
-      });
-   })();
-</script> }
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+      emailjs.init("SUR3M-booW5QRutt-");
+      })();
+  </script> 
 </head>
 
 <body>
@@ -34,7 +30,7 @@
                 ">About
                 </a>
              </li>
-             <li class="nav__link">
+             <li class="nav__link" onclick="toogleModal()">
                 <a href="#" class="
                 nav__link--anchor
                 link__hover-effect
@@ -50,7 +46,7 @@
                 ">Contact
                 </a>
              </li>
-             <li class="nav__link click">
+             <li class="nav__link click" onclick="toggleContrast()">
                 <a href="#" class="
                 nav__link--anchor
                 link__hover-effect
@@ -66,7 +62,7 @@
                 <h1 class="title red"><b class="red">I'm Bomy</b></h1>
                 <p class="header__para">I'm a <b class="red">Frontend Software Engineer</b> Frontend Software Engineer with a deep passion for creating web applications that deliver exceptional user experiences. 
                     <br>
-                    Here's a little more <b class="red">about me.
+                    Here's a little more <b class="red click" onclick="toggleModal()">about me.
                     </b>
                 </p>
                 <div class="social__list">
@@ -82,7 +78,7 @@
                 </div>
             </div>
         </Header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -115,6 +111,7 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">
                     Let's Connect!
                 </h3>
@@ -143,7 +140,7 @@
                     Thanks for the form submission! Looking forward to speaking with you soon.
                 </div>
             </div>
-            <i class="fas fa-times modal__exit click"></i>
+            
         </div>
     </section>
 
